@@ -1,0 +1,74 @@
+.support {
+    padding: 300px 0 155px;
+    background-color: #FBFCFF;
+    background-image: url('../../images/support-bg.svg');
+    background-size: contain;
+    background-position: center left;
+    background-repeat: no-repeat;
+
+    &__inner {
+        justify-content: space-between;
+    }
+
+    &__box {
+        max-width: 570px;
+        width: 100%;
+    }
+
+    &__title,
+    &__text {
+        margin-bottom: 31px;
+    }
+
+    &__title,
+    &__cta {
+        color: $dark-blue
+    }
+
+    &__title {
+        font-size: 46px;
+        line-height: 54px;
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 26px;
+        color: #A5ACB5;
+    }
+
+    &__cta {
+        margin-bottom: 23px;
+        line-height: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__img-wrapper,
+    &__img {
+        position: relative;
+    }
+
+    &__img-wrapper {
+        line-height: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -22px;
+            right: -22px;
+            width: 370px;
+            height: 370px;
+            border-radius: 12px;
+            background-color: #D5F0FF;
+        }
+    }
+
+    &__img {
+        max-width: 548px;
+        width: 100%;
+        border-radius: 12px;
+        object-fit: contain;
+        object-position: center;
+    }
+}
