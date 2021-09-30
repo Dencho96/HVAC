@@ -1,7 +1,46 @@
 .hero {
     height: 100vh;
-    background-image: url('../../images/hero-bg.jpg');
+    background-image: url('../images/hero-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    &__container{
+        height: 100%;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__inner {
+        position: absolute;
+        bottom: 30%;
+        left: 0;
+        max-width: 535px;
+        width: 100%;
+        color: $dark-blue;
+    }
+
+    &__title {
+        margin-bottom: 19px;
+        font-size: 66px;
+        line-height: 71px;
+        font-weight: 700;
+    }
+
+    &__text {
+        max-width: 415px;
+        width: 100%;
+        margin-bottom: 45px;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+    &__link {
+        &+& {
+            margin-left: 20px;
+        }
+    }
 }

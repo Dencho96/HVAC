@@ -45,3 +45,22 @@ body {
 .d-flex {
     display: flex;
 }
+
+.text-orange {
+    color: $orange;
+}
+
+.btn {
+    padding: 17px 15px 16px;
+    min-width: 236px;
+    text-transform: uppercase;
+    background-color: #01A9F1;
+    color: white;
+    border-radius: 26px;
+    text-align: center;
+    font-weight: 500;
+
+    &--orange {
+        background-color: $orange;
+    }
+}
