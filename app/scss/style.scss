@@ -1,3 +1,7 @@
 @import 'fonts';
 @import 'vars';
+@import 'mixins';
 @import 'global';
+
+@import 'components/header';
+@import 'page-index/hero';
