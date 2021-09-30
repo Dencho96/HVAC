@@ -1,0 +1,68 @@
+.service {
+    margin-top: -192px;
+    padding: 310px 0 130px;
+    background-color: #FBFCFF;
+    background-image: url('../images/service-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center left;
+
+    &__box {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    &__title {
+        max-width: 295px;
+        width: 100%;
+        margin-bottom: 45px;
+        color: $dark-blue;
+        font-size: 46px;
+        line-height: 54px;
+        font-weight: 700;
+    }
+
+    &__link{
+        display: inline-block;
+        &+&{
+            margin-top: 20px;
+        }
+    }
+
+    &__items {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin-bottom: 45px;
+        max-width: 355px;
+        width: 100%;
+    }
+
+    &__item-info {
+        align-items: center;
+        margin-bottom: 4px;    
+    }
+
+    &__item-icon {
+        margin-right: 24px;
+        width: 45px;
+        height: 45px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__item-title {
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $dark-blue;
+    }
+
+    &__item-text {
+        padding-left: 69px;
+        font-size: 14px;
+        line-height: 26px;
+        color: #A5ACB5;
+    }
+}
