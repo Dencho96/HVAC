@@ -1,0 +1,38 @@
+.promo {
+    height: 590px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__container {
+        position: relative;
+        height: 100%;
+    }
+
+    &__inner {
+        position: absolute;
+        bottom: -140px;
+    }
+
+    &__box {
+        padding: 50px 41px 48px 67px;
+        background-color: $blue;
+        border-radius: 12px;
+        color: white;
+    }
+
+    &__title {
+        margin-bottom: 21px;
+        font-size: 46px;
+        line-height: 55px;
+        font-weight: 700;
+    }
+
+    &__text {
+        max-width: 460px;
+        width: 100%;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 500;
+    }
+}
