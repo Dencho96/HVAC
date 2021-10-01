@@ -3,7 +3,13 @@
 @import 'mixins';
 @import 'global';
 
+
+// Import components
 @import 'components/header';
+
+
+
+// Import page-index parts
 @import 'page-index/hero';
 @import 'page-index/categories';
 @import 'page-index/service';
@@ -11,3 +17,4 @@
 @import 'page-index/promo';
 @import 'page-index/support';
 @import 'page-index/tips';
+@import 'page-index/partners';
