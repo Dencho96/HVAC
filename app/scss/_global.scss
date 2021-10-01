@@ -63,4 +63,9 @@ body {
     &--orange {
         background-color: $orange;
     }
+
+    &--white {
+        background-color: white;
+        color: $blue;
+    }
 }
