@@ -5,6 +5,10 @@
     background-repeat: no-repeat;
     background-position: center left;
 
+    @include maxw576 {
+        padding: 73px 0 39px;
+    }
+
     &__title {
         margin-bottom: 57px;
         font-size: 46px;
@@ -17,6 +21,27 @@
     &__inner {
         justify-content: space-between;
         margin-bottom: 70px;
+
+        @include maxw1205 {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        &+& {
+            @include maxw1205 {
+                margin-top: 40px;
+            }
+        }
+
+        @include maxw576 {
+            display: none;
+
+            &:nth-child(1){
+                display: block;
+            }
+        }
     }
 
     &__img,
@@ -30,6 +55,16 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        @include maxw992 {
+            width: 350px;
+            height: 300px;
+        }
+
+        @include maxw576 {
+            width: 300px;
+            height: 240px;
+        }
     }
 
     &__box {
@@ -40,6 +75,11 @@
         width: 100%;
         background-color: white;
         box-shadow: 5px 3px 16px rgba(0, 0, 0, 0.08);
+
+        @include maxw576 {
+            width: 280px;
+            padding: 30px 25px 15px;
+        }
     }
 
     &__link {
@@ -48,6 +88,11 @@
         line-height: 24px;
         color: $blue;
         font-weight: 500;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $dark-blue;
+        }
     }
 
     &__text {

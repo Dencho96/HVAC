@@ -4,14 +4,39 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    @include maxw576 {
+        height: 462px;
+    }
+
     &__container {
         position: relative;
         height: 100%;
+
+
     }
 
     &__inner {
         position: absolute;
         bottom: -140px;
+        
+        @include maxw1205 {
+            bottom: -107px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 550px;
+            width: 100%;
+        }
+
+        @include maxw576 {
+            max-width: none;
+            width: auto;
+        }
+    }
+
+    &__img {
+        @include maxw1205 {
+            display: none;
+        }
     }
 
     &__box {
@@ -19,6 +44,10 @@
         background-color: $blue;
         border-radius: 12px;
         color: white;
+
+        @include maxw576 {
+            padding: 45px 30px 45px 35px;
+        }
     }
 
     &__title {
@@ -26,6 +55,11 @@
         font-size: 46px;
         line-height: 55px;
         font-weight: 700;
+
+        @include maxw576 {
+            font-size: 33px;
+            line-height: 39px;
+        }
     }
 
     &__text {

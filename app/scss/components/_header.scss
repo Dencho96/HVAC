@@ -13,6 +13,46 @@
         background-color: white;
         box-shadow: 7px 4px 18px rgba(0, 0, 0, 0.05);
         border-radius: 15px;
+        
+        @include maxw992 {
+            position: relative;
+        }
+
+        @include maxw767 {
+            padding: 10px 30px 10px;
+        }
+
+        @include maxw576 {
+            padding: 10px 25px 10px;
+        }
+    }
+
+    &__logo-img {
+        @include maxw576 {
+            max-width: 104px;
+            width: 100%;
+        }
+    }
+
+    &__nav {
+        @include maxw992 {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            display: none;
+            padding: 70px 0;
+            background-color: white;
+            border-radius: 0 0 15px 15px;
+        }
+    }
+
+    &__list {
+
+        @include maxw992 {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -20,10 +60,46 @@
 
         &+& {
             margin-left: 57px;
+
+            @include maxw992 {
+                margin-left: 0;
+            }
+        }
+
+        @include maxw992 {
+            font-size: 22px;
+        }
+
+        @include maxw767 {
+            font-size: 20px;
+        }
+
+        @include maxw576 {
+            font-size: 18px;
         }
     }
 
     &__link {
         color: $dark-blue;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $blue;
+        }
+
+        @include maxw992 {
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+        }
+    }
+
+    &__menu-btn {
+        display: none;
+        padding: 0;
+
+        @include maxw992 {
+            display: block;
+        }
     }
 }

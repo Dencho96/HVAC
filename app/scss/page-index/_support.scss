@@ -6,13 +6,28 @@
     background-position: center left;
     background-repeat: no-repeat;
 
+
+    @include maxw576 {
+        padding: 215px 0 90px;
+    }
+
     &__inner {
         justify-content: space-between;
+
+        @include maxw1205 {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__box {
         max-width: 570px;
         width: 100%;
+
+        @include maxw1205 {
+            margin-bottom: 50px;
+        }
     }
 
     &__title,
@@ -61,6 +76,13 @@
             height: 370px;
             border-radius: 12px;
             background-color: #D5F0FF;
+
+            @include maxw576 {
+                width: 175px;
+                height: 216px;
+                bottom: -11px;
+                right: -11px;
+            }
         }
     }
 
@@ -70,5 +92,9 @@
         border-radius: 12px;
         object-fit: contain;
         object-position: center;
+
+        @include maxw576 {
+            max-width: 350px;
+        }
     }
 }

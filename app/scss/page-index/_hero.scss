@@ -1,12 +1,22 @@
 .hero {
-    height: 100vh;
+    height: 920px;
     background-image: url('../images/hero-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
+    @include maxw576 {
+        height: 710px;
+        background-image: url('../images/hero-bg-mob.jpg');
+        background-position: top;
+    }
+
     &__container{
         height: 100%;
+
+        @include maxw767 {
+            padding-top: 155px;
+        }
     }
 
     &__container {
@@ -15,11 +25,25 @@
 
     &__inner {
         position: absolute;
-        bottom: 30%;
-        left: 0;
+        bottom: 37%;
+        left: 15px;
         max-width: 535px;
         width: 100%;
         color: $dark-blue;
+
+        @include maxw992 {
+            top: 35%;
+        }
+
+        @include maxw767 {
+            position: static;
+        }
+    }
+
+    &__title, &__text {
+        @include maxw576 {
+            text-align: center;
+        }
     }
 
     &__title {
@@ -27,6 +51,19 @@
         font-size: 66px;
         line-height: 71px;
         font-weight: 700;
+
+        & .text-orange {
+            @include maxw576 {
+                display: block;
+            }
+        }
+
+        @include maxw576 {
+            margin-bottom: 12px;
+            font-size: 34px;
+            line-height: 38px;
+            letter-spacing: -0.3px;
+        }
     }
 
     &__text {
@@ -36,11 +73,28 @@
         font-size: 14px;
         line-height: 24px;
         font-weight: 500;
+
+        @include maxw576 {
+            margin: 0 auto 45px;
+            font-size: 12px;
+        }
     }
 
     &__link {
         &+& {
             margin-left: 20px;
+
+            @include maxw767 {
+                margin-left: 0;
+                margin-top: 20px !important;
+            }
+        }
+
+        @include maxw767 {
+            display: block;
+            max-width: 261px;
+            width: 100%;
+            margin: 0 auto !important;
         }
     }
 }
